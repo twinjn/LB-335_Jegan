@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Meine Aufgaben</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📱 TaskMaster</h1>
+            <div class="stats">
+                <span id="totalTasks">0</span> Aufgaben insgesamt • 
+                <span id="completedTasks">0</span> erledigt
+            </div>
+        </div>
+
+        <div class="add-section">
+            <input type="text" class="add-input" id="taskInput" placeholder="Neue Aufgabe hinzufügen..." />
+            <button class="add-btn" id="addBtn">+</button>
+        </div>
+
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">Alle</button>
+            <button class="filter-btn" data-filter="active">Offen</button>
+            <button class="filter-btn" data-filter="completed">Erledigt</button>
+        </div>
+
+        <div class="tasks-list" id="tasksList">
+            <div class="empty-state">
+                <div class="empty-state-icon">✨</div>
+                <p>Keine Aufgaben vorhanden</p>
+                <p style="font-size: 14px; margin-top: 10px;">Füge deine erste Aufgabe hinzu!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="swipe-indicator" id="swipeIndicator">← Wische zum Löschen</div>
+
+    <!-- JavaScript Dateien laden -->
+    <script src="TaskModel.js"></script>
+    <script src="TaskViewModel.js"></script>
+    <script src="TaskView.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
